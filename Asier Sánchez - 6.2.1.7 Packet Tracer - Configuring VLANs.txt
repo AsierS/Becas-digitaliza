@@ -1,0 +1,9 @@
+1)	
+	2) ¿Qué beneficios proporciona configurar las VLAN a la configuración actual?
+	-Es más sencillo de operar, más seguro y más eficiente.
+2)	
+	2) ¿Con qué comando se muestran solamente el nombre y el estado de la VLAN y los puertos asociados en un switch?
+	-show vlan brief
+4)
+	Intente hacer ping entre PC1 y PC4. Si bien los puertos de acceso están asignados a las VLAN adecuadas, ¿los pings se realizaron correctamente? ¿Por qué?
+	-No. Los pings fallan porque los switches están así: PC1-VLAN 1 y PC4-VLAN10

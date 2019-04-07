@@ -1,0 +1,32 @@
+Preguntas)
+1)
+	b. Responda las siguientes preguntas:
+
+	1)    ¿Cuántas interfaces FastEthernet tiene el switch? 24
+
+	2) ¿Cuántas interfaces Gigabit Ethernet tiene el switch? 2
+
+	3) ¿Cuál es el rango de valores que se muestra para las líneas vty? De 0 a 15
+
+	4)    ¿Qué comando muestra el contenido actual de la memoria de acceso aleatorio no volátil (NVRAM)? show startup-config
+
+	5)    ¿Por qué el switch responde con startup-config is not present? Porque la configuración no está en la NVRAM.
+
+2)
+	¿Por qué se requiere el comando login? Porque el comando password configura la contraseña pero no te da acceso. Para eso es el comando login.
+	7)
+		b.   ¿Qué se muestra como contraseña de enable secret? $1$mERr$ILwq/b7kc.7X/ejA4Aosn0
+
+		c.    ¿Por qué la contraseña de enable secret se ve diferente de lo que se configuró? Porque la contraseña está encriptada.
+	8)
+		Si configura más contraseñas en el switch, ¿se mostrarán como texto no cifrado o en forma cifrada en el archivo de configuración? Explique. El comando que acabamos de ejecutar, service password-encryption, encripta las contraseñas que ya estén configuradas y las que configuremos después.
+3)
+	1)     ¿Cuándo se muestra este aviso? Cuando alguien entre a la consola.
+
+	2)     ¿Por qué todos los switches deben tener un aviso de MOTD? Para avisar de asuntos interesantes.
+4)
+	2) ¿Cuál es la versión abreviada más corta del comando copy running-config startup-config? cop r s
+
+	3)	¿Qué comando muestra el contenido de la NVRAM? show startup-config
+
+		¿Todos los cambios realizados están grabados en el archivo? Sí.

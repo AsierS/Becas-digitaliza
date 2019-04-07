@@ -1,0 +1,37 @@
+1)
+	a.     Observe el diagrama de la topología. ¿Cuántas redes hay en total? 5
+
+	b. ¿Cuántas redes están conectadas directamente al R1, al R2 y al R3? 2, 3 y 2, respectivamente.
+
+	c. ¿Cuántas rutas estáticas requiere cada router para llegar a las redes que no están conectadas directamente? 3, 2 y 3, respectivamente.
+
+	d. Pruebe la conectividad a las LAN del R2 y el R3 haciendo ping de la PC1 a la PC2 y la PC3.
+
+	¿Por qué no logró hacerlo? Porque el enrutamiento no está confiigurado, sólo puede llegar al router de su red.
+2)
+	1)
+		a. ¿Qué es una ruta estática recursiva? Es una que necesita el otro router para hacer llegar los paquetes a su destino.
+
+		b. ¿Por qué una ruta estática recursiva requiere dos búsquedas en la tabla de routing? Primero mira el destino y luego por dónde da el salto.
+
+		c. Configure una ruta estática recursiva a cada red que no esté conectada directamente al R1, incluidos los enlaces WAN entre el R2 y el R3. Esto se hace con los comandos "p route 172.31.0.0 255.255.255.0 172.31.1.193, "ip route 172.31.1.196 255.255.255.252 172.31.1.193" e "ip route 172.31.1.128 255.255.255.192 172.31.1.193"
+	2)
+		a. ¿En qué se diferencia una ruta estática conectada directamente de una ruta estática recursiva? La primera necesita las interfaces de salida para mandar paquetes, la segunda usa la dirección ip para ello.
+
+		b. ¿Con qué comando se muestran solo las redes conectadas directamente? show ip route connected
+
+		c. ¿Con qué comando se muestran solo las rutas estáticas que se indican en la tabla de routing? show ip route static
+
+		d. Al ver la tabla de routing completa, ¿cómo se puede distinguir entre una ruta estática conectada directamente y una red conectada directamente? La estática tiene la letra S y la conectada la letra C.
+3)
+	a. ¿En qué se diferencia una ruta predeterminada de una ruta estática común? La predeterminada se usa cuando el router no conoce otra ruta. La estática se utiliza para mandar los paquetes a una red en concreto.
+
+	b. ¿Cómo se muestra una ruta estática en la tabla de routing? S* 0.0.0.0/0
+4)
+	a. Explique qué es una ruta completamente especificada. Es una ruta que está configurada con una interfaz de salida y tiene configurado su siguiente destino.
+
+	b. Escriba una ruta completamente especificada del R3 a la red entre el R2 y el R1. No configure la ruta, solo calcúlela.  ip route 172.31.1.192 255.255.255.252 s0/0/1 172.31.1.197
+
+	c. Escriba una ruta estática completamente especificada del R3 a la LAN del R1. No configure la ruta, solo calcúlela. ip route 172.31.1.0 255.255.255.128 s0/0/1 172.31.1.197
+5)
+	¿Qué comandos show puede utilizar para verificar que las rutas estáticas están configuradas correctamente? "show ip route" y "show ip route static"
